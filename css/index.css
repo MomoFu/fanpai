@@ -1,0 +1,88 @@
+html,body{
+	background-color: #e6f8f1;
+	width:100%;
+}
+.mainContainer{
+	position: relative;
+	background-repeat : no-repeat  ;
+	width:100%;
+}
+
+.mainContainer .titleContainer{
+	position: relative;
+    width: 100%;
+    margin:auto;
+   
+}
+.mainContainer .titleContainer img{
+	display: block;
+    width: 100%;
+}
+.mainContainer .content{
+	position: absolute;
+    margin: auto;
+    top:80%;
+    width:300px;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.mainContainer .content .nineGeziContainer{
+	position: relative;
+    width: 100%;
+    margin: auto;
+
+}
+.mainContainer .content .nineGeziContainer img{
+	display: block;
+    width: 100%;
+}
+.mainContainer .content .bottomOneContainer{
+	position: relative;
+	width:100%;
+    margin-left: -20px;
+    margin-top: 20px;
+}
+.mainContainer .content .bottomOneContainer .clickMe{
+	position: absolute;
+	width:80px;
+}
+.mainContainer .content .bottomOneContainer .clickMe img{
+	display: block;
+    width: 100%;
+}
+.mainContainer .content .bottomOneContainer #clickOne{
+	left:12%;
+	z-index: 1;
+}
+.mainContainer .content .bottomOneContainer #clickTwo{
+	left:20%;
+	z-index: 2;
+}
+.mainContainer .content .bottomOneContainer #clickThree{
+	left:28%;
+	z-index: 3;
+}
+.mainContainer .content .bottomOneContainer #clickFour{
+	left:36%;
+	z-index: 4;
+}
+.mainContainer .content .bottomOneContainer #clickFive{
+	left:44%;
+	z-index: 5;
+}
+.mainContainer .content .bottomOneContainer #clickSix{
+	left:52%;
+	z-index: 6;
+}
+.mainContainer .content .bottomOneContainer #clickSeven{
+	left:60%;
+	z-index: 7;
+}
+.mainContainer .content .bottomOneContainer #clickEight{
+	left:68%;
+	z-index: 8;
+}
+.mainContainer .content .bottomOneContainer #clickNine{
+	left:76%;
+	z-index: 9;
+}
