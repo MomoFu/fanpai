@@ -21,36 +21,103 @@
 				</div>
 				
 				<div class="bottomOneContainer">
-				    <div id="clickOne" class="clickMe">
-				    	<img src="images/pai24.png" alt="">
+				    <div id="target1" class="target">
+				    	<div id="clickOne" class="clickMeFront">
+					    	<img src="images/pai24.png" alt="">
+					    </div>
+					    <div id="clickOneBack" class="clickMeBack">
+					    	<img src="images/pai1.png" alt="">
+					    </div>
 				    </div>
-				    <div id="clickTwo" class="clickMe">
-				    	<img src="images/pai24.png" alt="">
-				    </div>
-				    <div id="clickThree" class="clickMe">
-				    	<img src="images/pai24.png" alt="">
-				    </div>
-				    <div id="clickFour" class="clickMe">
-				    	<img src="images/pai24.png" alt="">
-				    </div>
-				    <div id="clickFive" class="clickMe">
-				    	<img src="images/pai24.png" alt="">
-				    </div>
-				    <div id="clickSix" class="clickMe">
-				    	<img src="images/pai24.png" alt="">
-				    </div>
-				    <div id="clickSeven" class="clickMe">
-				    	<img src="images/pai24.png" alt="">
-				    </div>
-				    <div id="clickEight" class="clickMe">
-				    	<img src="images/pai24.png" alt="">
-				    </div>
-				    <div id="clickNine" class="clickMe">
-				    	<img src="images/pai24.png" alt="">
-				    </div>
+					<div id="target2" class="target">
+					 	<div id="clickTwo" class="clickMeFront">
+					    	<img src="images/pai24.png" alt="">
+					    </div>
+					    <div id="clickTwoBack" class="clickMeBack">
+					    	<img src="images/pai1.png" alt="">
+					    </div>
+					</div>   
+					<div id="target3" class="target">
+						<div id="clickThree" class="clickMeFront">
+					    	<img src="images/pai24.png" alt="">
+					    </div>
+					    <div id="clickThreeBack" class="clickMeBack">
+					    	<img src="images/pai1.png" alt="">
+					    </div>
+					</div>  
+					<div id="target4" class="target">
+						<div id="clickFour" class="clickMeFront">
+					    	<img src="images/pai24.png" alt="">
+					    </div>
+					    <div id="clickFourBack" class="clickMeBack">
+					    	<img src="images/pai1.png" alt="">
+					    </div>
+					</div>    
+					<div id="target5" class="target">
+						<div id="clickFive" class="clickMeFront">
+					    	<img src="images/pai24.png" alt="">
+					    </div>
+					    <div id="clickFiveBack" class="clickMeBack">
+					    	<img src="images/pai1.png" alt="">
+					    </div>
+					</div>  
+					<div id="target6" class="target">
+						<div id="clickSix" class="clickMeFront">
+					    	<img src="images/pai24.png" alt="">
+					    </div>
+					    <div id="clickSixBack" class="clickMeBack">
+					    	<img src="images/pai1.png" alt="">
+					    </div>
+					</div> 
+					<div id="target7" class="target">
+						<div id="clickSeven" class="clickMeFront">
+					    	<img src="images/pai24.png" alt="">
+					    </div>
+					    <div id="clickSevenBack" class="clickMeBack">
+					    	<img src="images/pai1.png" alt="">
+					    </div>
+					</div>    
+					<div id="target8" class="target">
+						<div id="clickEight" class="clickMeFront">
+					    	<img src="images/pai24.png" alt="">
+					    </div>
+					    <div id="clickEightBack" class="clickMeBack">
+					    	<img src="images/pai1.png" alt="">
+					    </div>
+					</div>    
+					<div id="target9" class="target">
+						<div id="clickNine" class="clickMeFront">
+					    	<img src="images/pai24.png" alt="">
+					    </div>
+					    <div id="clickNineBack" class="clickMeBack">
+					    	<img src="images/pai1.png" alt="">
+					    </div>
+					</div>    
+					    
 					
 				</div>
 			</div>
 	 </div>
+
+        <script src="js/Tween.js"></script>
+		<script src="js/RequestAnimationFrame.js"></script>
+		<script src="js/fapaiCreateTweens.js"></script>
+		<script>
+			var tween, tweenBack;
+			var tweens = new Array(9);
+			var position = {x: 0, y: 0, rotation: 0};
+			var targets = function(){
+				var tmp = new Array(9);
+				for(var j = 0 ; j < tmp.length ; j ++ ){
+					tmp[j] = document.getElementById('target'+(j+1));
+				}
+				return tmp ;
+			}();
+			console.log(targets);			
+			init();
+			animate();			
+		</script>
 </body>
 </html>
+
+ <!-- ({x: 2+69*i, y: -330, rotation: 359}, 200)            -->
