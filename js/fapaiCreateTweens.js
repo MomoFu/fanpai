@@ -5,7 +5,7 @@ function createTweens(){
 	for( var i = 0  ; i <= tweens.length -1  ; i ++ ){
 	  
   	var tween = new TWEEN.Tween(position)
-		.to({x: 2+69*i-parseInt(i/3)*300+21*parseInt(i/3), y: -330+parseInt(i/3)*100, rotation: 359}, 200)
+		.to({x: 2+69*i-parseInt(i/3)*300+21*parseInt(i/3), y: -330+parseInt(i/3)*100, rotation: 359}, 100)
 		.delay(0)
 		//.easing(TWEEN.Easing.Cubic.In)
 		.onUpdate(function(i){
@@ -18,7 +18,7 @@ function createTweens(){
 		.onComplete(function(){
 			position.x = 0 ;
 			position.y = 0 ;
-			console.log(position);
+			//console.log(position);
 		});
 
 	tweens[i] = tween ;

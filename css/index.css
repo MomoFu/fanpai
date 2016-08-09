@@ -51,8 +51,19 @@ html,body{
     width: 100%;
 }
 .mainContainer .content .bottomOneContainer .clickMeBack img{
+	position: absolute;
+	z-index: 1;
 	display: block;
     width: 100%;
+}
+.mainContainer .content .bottomOneContainer .clickMeBack .rewards{
+	position: absolute;
+	z-index: 2;
+	display: block;
+    width: 100%;
+    text-align: center;
+    line-height:100px;
+    font-size:17px;
 }
 .mainContainer .content .bottomOneContainer #clickOne{
 	left:12%;
@@ -118,15 +129,14 @@ html,body{
 	left:76%;
 }
 .clickMeBack{
- 		/* The back side is flipped 180 deg by default */
-		transform:rotateY(180deg);
+	    transform:rotateY(180deg);
 		-webkit-transform:rotateY(180deg);
-		-moz-transform:rotateY(180deg);
-		-ms-transform:rotateY(180deg);
-		-o-transform:rotateY(180deg);
- 
+		-moz-transform:rotateY(360deg);
+		-ms-transform:rotateY(360deg);
+		-o-transform:rotateY(360deg);
 }
-.target:hover .clickMeFront{
+
+.front{
 		/* When the container is hovered, flip the front side and hide it .. */
 		transform:rotateY(180deg);
 		-webkit-transform:rotateY(180deg);
@@ -135,14 +145,29 @@ html,body{
 		-o-transform:rotateY(180deg);
 		}
 
-.target:hover .clickMeBack{
+.back{
 		/* .. at the same time flip the back side into visibility */
 		transform:rotateY(360deg);
 		-webkit-transform:rotateY(360deg);
 		-moz-transform:rotateY(360deg);
-		-ms-transform:rotateY(180deg);
-		-o-transform:rotateY(180deg);
+		-ms-transform:rotateY(360deg);
+		-o-transform:rotateY(360deg);
 		}
+
+.originFront{
+	    transform:rotateY(0deg);
+		-webkit-transform:rotateY(0deg);
+		-moz-transform:rotateY(360deg);
+		-ms-transform:rotateY(360deg);
+		-o-transform:rotateY(360deg);
+}
+.originBack{
+        transform:rotateY(180deg);
+		-webkit-transform:rotateY(180deg);
+		-moz-transform:rotateY(0deg);
+		-ms-transform:rotateY(0deg);
+		-o-transform:rotateY(0deg);
+}
 .target{
 	cursor:pointer;
 	perspective: 500;
@@ -168,9 +193,72 @@ html,body{
 		-o-backface-visibility: hidden;
 
  		/* Animate the transitions */
-		-webkit-transition:0.8s; 
-		-moz-transition:0.8s; 
-		-ms-transition:0.8s; 
-		-o-transition:0.8s; 
-		transition:0.8s; 
+		-webkit-transition:0.5s; 
+		-moz-transition:0.5s; 
+		-ms-transition:0.5s; 
+		-o-transition:0.5s; 
+		transition:0.5s; 
+}
+.maskContainer{
+	position : fixed ;
+	width : 100% ;
+	height : 100% ;
+	top:100%;
+	left:0%;
+	background-color : rgba(0,0,0,0.5);
+	display : none ;
+}
+.maskContainer{
+	z-index :11 ;
+
+}
+.kContainer{
+	position: relative;
+	width:300px;
+	margin: auto;
+}
+.rewardContainer{
+	width: 87%;
+    position: absolute;
+    left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%,0);
+}
+.maskContainer .kContainer .rewardContainer div.wordContinue{
+	position: absolute;
+    left: 58%;
+    top: 43%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 18px;
+    line-height: 28px;
+}
+.maskContainer .kContainer .rewardContainer div.wordContinue .wordContinueTwo{
+	font-size: 23px;
+}
+.maskContainer .kContainer .rewardContainer div.you .wordContinueOne{
+    margin-left: 9px;
+    font-size: 25px;
+}
+.maskContainer .kContainer .rewardContainer div.you .wordContinueTwo{
+	font-size: 18px;
+}
+.buttonContainer{
+	cursor:pointer;
+	width: 40%;
+    position: absolute;
+    left: 50%;
+    margin-top: 110%;
+    transform: translate(-50%,0);
+}
+.closeContainer{
+	cursor:pointer;
+	width: 9%;
+    position: absolute;
+    left: 78%;
+    margin-top: 50%
+}
+.kContainer img{
+	width:100%;
+	display: block;
 }
