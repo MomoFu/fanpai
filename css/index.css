@@ -212,25 +212,30 @@ html,body{
 	opacity: 1;
 	background-color : rgba(0,0,0,0);
 }
-#over .kContainer{
-	top:30%;
-	width:170px;
-}
+
 .maskContainer{
 	z-index :11 ;
 
 }
 .kContainer{
-	position: relative;
-	width:400px;
+	position: absolute;
+	width:100%;
+	height:100%;
 	margin: auto;
 }
 .rewardContainer{
-	width: 87%;
     position: absolute;
-    left: 50%;
-    margin-top: 50%;
-    transform: translate(-50%,0);
+    left: 11.5%;
+    right: 11.5%;
+    top: 22%;
+    margin: auto;
+}
+#over .kContainer .rewardContainer{
+    position: absolute;
+    left: 27%;
+    right: 27%;
+    top: 40%;
+    margin: auto;
 }
 .maskContainer .kContainer .rewardContainer div.wordContinue{
 	position: absolute;
@@ -238,33 +243,29 @@ html,body{
     top: 43%;
     transform: translate(-50%,-50%);
     text-align: center;
-    font-size: 23px;
+    font-size: 18px;
     line-height: 28px;
 }
 .maskContainer .kContainer .rewardContainer div.wordContinue .wordContinueTwo{
-	font-size: 22px;
-}
-.maskContainer .kContainer .rewardContainer div.you .wordContinueOne{
-    margin-left: 9px;
-    font-size: 30px;
-}
-.maskContainer .kContainer .rewardContainer div.you .wordContinueTwo{
-	font-size: 22px;
+	font-size: 13px;
+	color: #818181;
 }
 .buttonContainer{
-	cursor:pointer;
-	width: 40%;
+	cursor: pointer;
     position: absolute;
-    left: 50%;
-    margin-top: 110%;
-    transform: translate(-50%,0);
+    left: 32.5%;
+    right: 32.5%;
+    top: 52%;
+}
+#continue #iknow{
+	top: 54%;
 }
 .closeContainer{
-	cursor:pointer;
-	width: 9%;
+	cursor: pointer;
+    /* width: 9%; */
     position: absolute;
-    left: 78%;
-    margin-top: 50%
+    left: 80%;
+    top: 22%;
 }
 .kContainer img{
 	width:100%;
@@ -272,15 +273,13 @@ html,body{
 }
 .content .bottomOneContainer #chance{
     text-align: center;
-    /* border: 1px solid red; */
     position: absolute;
-    left: 50%;
-    transform: translate(-45%,0);
-    /* margin-left: 40%; */
-    font-size: 20px;
-    width: 300px;
+    left: 25%;
+    right:15%;
+    color:#595959;
+    font-size: 13px;
 }
 .content .bottomOneContainer #chance>span{
-	color: red;
-	font-size: 25px;
+	color: #ff4f4f;
+	font-size: 13px;
 }
