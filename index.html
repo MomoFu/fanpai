@@ -21,6 +21,7 @@
 				</div>
 				
 				<div class="bottomOneContainer">
+				    <div id="chance">你还有<span></span>次翻牌机会</div>
 				    <div id="target1" class="target">
 				    	<div id="clickOne" class="clickMeFront">
 					    	<img src="images/pai24.png" alt="">
@@ -108,13 +109,23 @@
 			</div>
 	 </div>
 
+      <div class="maskContainer" id="over">
+		
+		<div class="kContainer">
+		    <div id="cash" class="rewardContainer">
+		    	<img src="images/hint.png" alt="">
+		    </div>
+		
+		</div>
+		
+	</div>
 	 <div class="maskContainer" id="fetch">
 		
 		<div class="kContainer">
 		    <div id="cash" class="rewardContainer">
 		    	<img src="images/kaijiang.png" alt="">
-		    	<div class="wordContinue"><p class="wordContinueOne">恭喜获得</p>
-		    	<p class="wordContinueTwo">8元现金</p></div>
+		    	<div class="wordContinue"><p class="wordContinueOne">苏宁易购</p>
+		    	<p class="wordContinueTwo"><b>818元红包</b></p></div>
 		    </div>
 	
 			<div id="iknow" class="buttonContainer">
@@ -134,8 +145,7 @@
 		<div class="kContainer">
 		    <div id="cash" class="rewardContainer">
 		    	<img src="images/kaijiang.png" alt="">
-		    	<div class="wordContinue"><p class="wordContinueOne">恭喜获得</p>
-		    	<p class="wordContinueTwo">VIP</p></div>
+		    	<div class="wordContinue you"><p class="wordContinueOne">获得VIP</p></div>
 		    </div>
 	
 			<div id="iknow" class="buttonContainer">
@@ -154,8 +164,8 @@
 		<div class="kContainer">
 		    <div id="cash" class="rewardContainer">
 		    	<img src="images/kaijiang.png" alt="">
-		    	<div class="wordContinue"><p class="wordContinueOne">恭喜获得</p>
-		    	<p class="wordContinueTwo">拼车劵</p></div>
+		    	<div class="wordContinue"><p class="wordContinueOne">嘀嗒拼车</p>
+		    	<p class="wordContinueTwo"><b>8~18元抵用券</b></p></div>
 		    </div>
 	
 			<div id="iknow" class="buttonContainer">
@@ -169,13 +179,13 @@
 		
 	</div>
 
-	<div class="maskContainer" id="haitaojuan">
+	<div class="maskContainer" id="higo">
 		
 		<div class="kContainer">
 		    <div id="cash" class="rewardContainer">
 		    	<img src="images/kaijiang.png" alt="">
 		    	<div class="wordContinue"><p class="wordContinueOne">恭喜获得</p>
-		    	<p class="wordContinueTwo">海淘劵</p></div>
+		    	<p class="wordContinueTwo"><b>Higo优惠劵</b></p></div>
 		    </div>
 	
 			<div id="iknow" class="buttonContainer">
@@ -254,8 +264,8 @@
 		<div class="kContainer">
 		    <div id="cash" class="rewardContainer">
 		    	<img src="images/kaijiang.png" alt="">
-		    	<div class="wordContinue"><p class="wordContinueOne">恭喜获得</p>
-		    	<p class="wordContinueTwo">50M流量</p></div>
+		    	<div class="wordContinue"><p class="wordContinueOne">流量银行</p>
+		    	<p class="wordContinueTwo"><b>50M联通流量</b></p></div>
 		    </div>
 	
 			<div id="iknow" class="buttonContainer">
@@ -274,8 +284,8 @@
 		<div class="kContainer">
 		    <div id="cash" class="rewardContainer">
 		    	<img src="images/kaijiang.png" alt="">
-		    	<div class="wordContinue"><p class="wordContinueOne">恭喜获得</p>
-		    	<p class="wordContinueTwo">理财金</p></div>
+		    	<div class="wordContinue"><p class="wordContinueOne">投融家</p>
+		    	<p class="wordContinueTwo"><b>理财金1000元</b></p></div>
 		    </div>
 	
 			<div id="iknow" class="buttonContainer">
@@ -294,8 +304,8 @@
 		<div class="kContainer">
 		    <div id="cash" class="rewardContainer">
 		    	<img src="images/kaijiang.png" alt="">
-		    	<div class="wordContinue"><p class="wordContinueOne">恭喜获得</p>
-		    	<p class="wordContinueTwo">还款金</p></div>
+		    	<div class="wordContinue"><p class="wordContinueOne">51信用卡</p>
+		    	<p class="wordContinueTwo"><b>25元还款金</b></p></div>
 		    </div>
 	
 			<div id="iknow" class="buttonContainer">
@@ -308,84 +318,37 @@
 		</div>
 		
 	</div>
-
+	
+        <script src="js/web-storage-cache.min.js"></script>
         <script src="js/Tween.js"></script>
 		<script src="js/RequestAnimationFrame.js"></script>
-		<script src="js/fapaiCreateTweens.js"></script>
 		<script src="js/giveValue.js"></script>
+		<script src="js/fapaiCreateTweens.js"></script>
+		<script src="js/time.js"></script>
 		<script>
+		//此处明天要做修改接收来自服务器的status判断
+
 		     var status=1;
-			 if(status==1){
-                var arr1=new Array(9);
-                var bb=new Array(9);
-                arr1=["8元现金","50M流量","2元话费","理财金","拼车劵","海淘代金券","25元还款金","继续加油","100M流量"];
-                for(var i=0;i<9;i++){
-		 			var valueOne = parseInt(Math.random()*(9-i));
-		 			//console.log(valueTwo);
-		 			bb[i] = arr1[valueOne];
-		 			arr1.splice(valueOne,1);
-		 			//console.log(arr2);
-		 		}
-		 		console.log(bb);
-		 		giveValue(bb);
-			 }
-			 if(status==2){
-			 	var arr2=new Array(9);
-			 	var aa=new Array(9);
-			 	for(var j=0;j<=4;j++){arr2[j]="获得VIP";}
-			 	for(var j=5;j<arr2.length;j++){arr2[j]="谢谢参与";}
-			 		//console.log(arr2);
-			 		for(var i=0;i<9;i++){
-			 			var valueTwo = parseInt(Math.random()*(9-i));
-			 			//console.log(valueTwo);
-			 			aa[i] = arr2[valueTwo];
-			 			arr2.splice(valueTwo,1);
-			 			//console.log(arr2);
-			 		}
-			 	console.log(aa);
-			 	giveValue(aa);
-			 }
-			 if(status==3){
-			 	//var arr2=new Array(9);
-			 	var arr3=new Array(9);
-			 	for(var j=0;j<arr3.length;j++){arr3[j]="谢谢参与";}
-			 		console.log(arr3);
-			 	    giveValue(arr3);
-			 }
+		     
+			 model(status);
+               
+             $(".content .bottomOneContainer #chance>span").text(timesAlready);
+			 
 
 				$(".target").click(function(){
 					$(this).children(".clickMeFront").addClass("front");
 					$(this).children(".clickMeBack").addClass("back");	
+					timesAlready--;
+                    saveStorage("times",timesAlready);
+                    $(".content .bottomOneContainer #chance>span").text(timesAlready);
 
 				});
-			 if(status==1){
-			 	$('.target .clickMeFront').click(function(){
-			 		var judg = $(this).parent().find("p").text();
-			 		var fsize = $(this).parent().find("p");
-			 		changeSty(judg,fsize);
-				});
-			 }		
-			 if(status==2){
-                  $(".target .clickMeFront").click(function(){
-                  	    //console.log(0);
-                  	    if($(this).parent().find("p").text()=="获得VIP")
-                          {
-                              $("#vip").animate({top:'0%'},1000).css("display","block");
-                              //console.log(1);
-	                  	   }else{
-	                          $("#continue").animate({top:'0%'},1000).css("display","block");
-	                  	   }
-				  });   
-			 }
-			 if(status==3){
-			 	$(".target .clickMeFront").click(function(){
-			 		 $("#continue").animate({top:'0%'},1000).css("display","block");
-			 	});
-			 }
+			
 				$(".maskContainer .kContainer #close").click(function(){
-					$(".maskContainer").css('display', 'none').animate({top:'100%'},1);
-					$(".target .clickMeFront").addClass("originFront").removeClass("front").removeClass("originFront");
-					$(".target .clickMeBack").addClass("originBack").removeClass("back").removeClass("originBack");
+					sameWork();
+				});
+				$(".maskContainer .kContainer .buttonContainer").click(function(){
+                    sameWork();
 				});
 			
 		</script>
@@ -402,8 +365,14 @@
 			}();
 			//console.log(targets);			
 			init();
-			animate();			
+			animate();	
+
 		</script>
+        <script>
+        	judgenoChance();	
+        </script>
+        			
+
 </body>
 </html>
 

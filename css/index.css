@@ -193,11 +193,11 @@ html,body{
 		-o-backface-visibility: hidden;
 
  		/* Animate the transitions */
-		-webkit-transition:0.5s; 
-		-moz-transition:0.5s; 
-		-ms-transition:0.5s; 
-		-o-transition:0.5s; 
-		transition:0.5s; 
+		-webkit-transition:0.2s; 
+		-moz-transition:0.2s; 
+		-ms-transition:0.2s; 
+		-o-transition:0.2s; 
+		transition:0.2s; 
 }
 .maskContainer{
 	position : fixed ;
@@ -205,8 +205,16 @@ html,body{
 	height : 100% ;
 	top:100%;
 	left:0%;
-	background-color : rgba(0,0,0,0.5);
+	background-color : rgba(0,0,0,0.8);
 	display : none ;
+}
+#over{
+	opacity: 1;
+	background-color : rgba(0,0,0,0);
+}
+#over .kContainer{
+	top:30%;
+	width:170px;
 }
 .maskContainer{
 	z-index :11 ;
@@ -214,7 +222,7 @@ html,body{
 }
 .kContainer{
 	position: relative;
-	width:300px;
+	width:400px;
 	margin: auto;
 }
 .rewardContainer{
@@ -230,18 +238,18 @@ html,body{
     top: 43%;
     transform: translate(-50%,-50%);
     text-align: center;
-    font-size: 18px;
+    font-size: 23px;
     line-height: 28px;
 }
 .maskContainer .kContainer .rewardContainer div.wordContinue .wordContinueTwo{
-	font-size: 23px;
+	font-size: 22px;
 }
 .maskContainer .kContainer .rewardContainer div.you .wordContinueOne{
     margin-left: 9px;
-    font-size: 25px;
+    font-size: 30px;
 }
 .maskContainer .kContainer .rewardContainer div.you .wordContinueTwo{
-	font-size: 18px;
+	font-size: 22px;
 }
 .buttonContainer{
 	cursor:pointer;
@@ -261,4 +269,18 @@ html,body{
 .kContainer img{
 	width:100%;
 	display: block;
+}
+.content .bottomOneContainer #chance{
+    text-align: center;
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 50%;
+    transform: translate(-45%,0);
+    /* margin-left: 40%; */
+    font-size: 20px;
+    width: 300px;
+}
+.content .bottomOneContainer #chance>span{
+	color: red;
+	font-size: 25px;
 }
